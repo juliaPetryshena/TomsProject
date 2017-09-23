@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TomsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-OL-y9w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mei-nr-1tk" appends="YES" id="UJ9-mE-6qO"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QJM-OL-y9w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4lb-G0-wLx"/>
+                            <constraint firstItem="QJM-OL-y9w" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iKQ-4e-FLo"/>
+                            <constraint firstItem="QJM-OL-y9w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nNI-zQ-W7x"/>
+                            <constraint firstItem="QJM-OL-y9w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vEv-JJ-4zu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mainImageView" destination="QJM-OL-y9w" id="Sc2-WU-5b6"/>
+                        <outlet property="swipeGesture" destination="KmI-MD-Ldf" id="259-q7-eca"/>
+                        <outlet property="tadGesture" destination="mei-nr-1tk" id="0jn-3f-jZf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mei-nr-1tk">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="Oca-nK-fi3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="NaD-wd-1Y7">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="4sR-ug-TPx"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="kYo-JL-gME">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="4lP-dB-ehQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="KmI-MD-Ldf">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="Jmi-cf-q5P"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="QBC-T6-oAC">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="h41-3l-ub8"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

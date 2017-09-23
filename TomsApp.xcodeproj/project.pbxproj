@@ -14,6 +14,7 @@
 		A769CFF11F76548A002DC21B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A769CFEF1F76548A002DC21B /* LaunchScreen.storyboard */; };
 		A769CFFC1F76548A002DC21B /* TomsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769CFFB1F76548A002DC21B /* TomsAppTests.swift */; };
 		A769D0071F76548B002DC21B /* TomsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769D0061F76548B002DC21B /* TomsAppUITests.swift */; };
+		A769D0171F765975002DC21B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A769D0161F765975002DC21B /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A769D0021F76548A002DC21B /* TomsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A769D0061F76548B002DC21B /* TomsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomsAppUITests.swift; sourceTree = "<group>"; };
 		A769D0081F76548B002DC21B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A769D0161F765975002DC21B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A769CFED1F76548A002DC21B /* Assets.xcassets */,
 				A769CFEF1F76548A002DC21B /* LaunchScreen.storyboard */,
 				A769CFF21F76548A002DC21B /* Info.plist */,
+				A769D0161F765975002DC21B /* Player.swift */,
 			);
 			path = TomsApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A769CFE91F76548A002DC21B /* ViewController.swift in Sources */,
+				A769D0171F765975002DC21B /* Player.swift in Sources */,
 				A769CFE71F76548A002DC21B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U284WCASF2;
 				INFOPLIST_FILE = TomsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tom.TomsApp;
@@ -441,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U284WCASF2;
 				INFOPLIST_FILE = TomsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tom.TomsApp;

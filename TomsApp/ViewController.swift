@@ -10,16 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet var tadGesture: UITapGestureRecognizer!
+    @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
+
+    var imageCounter = 1
+    var audioPlayer = Player()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.mainImageView.image =  UIImage(named: "1.png")
+    }
+    
+    func setupNewImage() {
+        imageCounter = imageCounter + 1
+        if imageCounter > 16 {
+            imageCounter = 1
+        }
+        self.mainImageView.image =  UIImage(named: "\(imageCounter).png")
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tapAction(_ sender: UITapGestureRecognizer) {
+        audioPlayer.playSound(soundName: "Sound1")
+        self.setupNewImage()
     }
-
-
+    
+    @IBAction func swipeAction(_ sender: UISwipeGestureRecognizer) {
+        audioPlayer.playSound(soundName: "Sound2")
+    }
 }
 
